@@ -20,6 +20,7 @@ useNavigate hook
 Signout button (used signout API)
 BUG FIX: when the user signUP, the profile photo was not getting updated 
  - solution: update our store again as soon as user signUP
+ - 
 
 
 
