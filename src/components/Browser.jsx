@@ -1,14 +1,19 @@
 import React from 'react'
 import Header from './Header'
-import { API_OPTION } from '../utils/constants'
 import useNowPlayingMovies from '../hooks/useNowPlayingMovies'
 import MainContainer from './MainContainer'
 import SecondaryContainer from './SecondaryContainer'
+import usePopularMovie from '../hooks/usePopularMovie'
+import useTopRatedMovie from '../hooks/useTopRatedMovie'
+import useUpcomingMovie from '../hooks/useUpcomingMovie'
 
 const Browser = () => {
 
   //custom hook
   useNowPlayingMovies();
+  usePopularMovie();
+  useTopRatedMovie();
+  useUpcomingMovie();
 
   
   return (
