@@ -3,14 +3,13 @@ import Header from './Header'
 import { checkValidation } from '../utils/validate';
 import { auth } from '../utils/firebase';
 import {createUserWithEmailAndPassword,signInWithEmailAndPassword,updateProfile} from "firebase/auth";
-import { useNavigate } from 'react-router-dom'
+
 import { useDispatch } from 'react-redux';
 import { addUser } from '../utils/userSlice';
 
 
 
 const SignUp = () => {
-  const navigate = useNavigate();
   const dispatch = useDispatch();
   const [isSignIn,setIsSignIn] = useState(true);
   const [errorMessage,setErrorMessage] = useState(null);
@@ -53,7 +52,6 @@ const SignUp = () => {
           // update the store again to resolve profile photo issue
           const {uid, email ,displayName, photoURL} = auth.currentUser;
           dispatch(addUser({uid:uid,email:email,displayName:displayName,photoURL:photoURL}));
-          navigate("/browser")
         }).catch((error) => {
           // An error occurred
           // ...
@@ -79,7 +77,6 @@ const SignUp = () => {
       .then((userCredential) => {
         // Signed in 
         const user = userCredential.user;
-        navigate("/browser")
         console.log(user)
         // ...
       })

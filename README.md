@@ -7,6 +7,7 @@ Sign UP/ Sign Form
 Form Validation
 useRef Hook
 Firebase setup
+
   - Install install -g firebase-tool
   - firebase login
   - firebase init
@@ -20,7 +21,12 @@ useNavigate hook
 Signout button (used signout API)
 BUG FIX: when the user signUP, the profile photo was not getting updated 
  - solution: update our store again as soon as user signUP
- - 
+BUG FIX: User can route to browser page using /browser url without signIN/UP
+ - solution: 
+Unsubscribing to listener
+Register to TMDB website and used its API
+Created Movieslice to store Nowplaying data
+
 
 
 
