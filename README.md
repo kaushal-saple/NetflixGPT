@@ -34,13 +34,18 @@ Update Store with Trailer Video Data
 Embedded the Yotube video and make it autoplay and mute
 Tailwind Classes to make Main Container look awesome
 Building secondary container
- -planning
+ -Movies List * N
+  -Movies card * N
+Created MovieList & Movie Card component
+Fetch the data from TDMB via custom hook and updated the store
+TMDB Image CDN URL and the path
+Made UI for the Browser page
+Toggle GPT search button on Header
+Use redux to store  the toggle state
 
-
-
-
-
-
+create a ToggleSlice and provide it to store 
+create GPTSearch component and based on the toggle state render the components in browser
+If button is click -> GPTsearch page && button click again -> browser page
 
 
 
