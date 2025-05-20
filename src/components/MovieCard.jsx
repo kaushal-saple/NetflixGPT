@@ -2,6 +2,7 @@ import React from 'react'
 import { IMG_CDN } from '../utils/constants'
 
 const MovieCard = ({posterPath}) => {
+  if(posterPath===null) return ; //early return
   return (
     <div className="w-52  p-1 m-1 overflow-y-hidden">
         <img 

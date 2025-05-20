@@ -4,7 +4,7 @@ export const API_OPTION = {
     method: 'GET',
     headers: {
       accept: 'application/json',
-      Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI1YmVjMzNlZTYzODhkNzkzMDMzZmE2NDQ1Y2FkMGM3ZSIsIm5iZiI6MTc0NTc1MDc3Mi44MzMsInN1YiI6IjY4MGUwYWY0M2M3MThlOGM1NTM3ZGViZiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.R2l7ss9WIAq2ITmzSZ6If1Kx7m6pmsTctYg3LEoMg8k'
+      Authorization: 'Bearer '+ import.meta.env.VITE_TMDB_API_KEY
     }
 };
 
@@ -17,3 +17,5 @@ export const SUPPORTED_LANGUAGE = [
   {identifier:"marathi",name:"Marathi"},
   {identifier:"french",name:"French"}
 ]
+
+export const searchAPI_key = import.meta.env.VITE_SEARCH_API_KEY

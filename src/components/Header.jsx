@@ -7,6 +7,7 @@ import { addUser,removeUser } from '../utils/userSlice';
 import { LOGO, SUPPORTED_LANGUAGE } from '../utils/constants';
 import { toggleGptSearchView } from '../utils/toggleSlice';
 import { changeLangugage } from '../utils/configSlice';
+import {removeGptMovies} from '../utils/gptSlice'
 
 
 const Header = () => {
@@ -14,6 +15,7 @@ const Header = () => {
   const dispatch =  useDispatch()
   const user = useSelector((store)=> store.user);
   const changeButtonText = useSelector((store)=>store.showGptSearch.showGptSearchView);
+  
   
   
 
@@ -61,6 +63,10 @@ const Header = () => {
 
   const handleLanguage = (e)=>{
     dispatch(changeLangugage(e.target.value));
+  }
+
+  if(changeButtonText===false){
+    dispatch(removeGptMovies())
   }
 
 

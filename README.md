@@ -52,6 +52,15 @@
 - Made Language option dynamic
 - created configslice for language
 - Dynamically access the language data from redux store and updated language in search bar
+- Adding GPT search feature
+- API key for gemini(GPT api key is paid)
+- TMDB search API for movies
+- used promise.all() method
+- store the results in redux store
+- Created the Movie recommendation page
+- Memoization
+
+
 
 
 
